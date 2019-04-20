@@ -3,7 +3,7 @@
 
 Stephani Michel: michels126@csu.fullerton.edu
 Heriberto Juache: herijuache@gmail.com
-Shane Wilson: swilson2@csu.fullerton.edu
+Shane Wilson: swilson2@csu.fullerton.edu 
 
 The goal of our code is to use parts of existing project as reference in creating our game snake. We will start off basic with having a snake that moves and extends and as he eats the fruit. In comparison to the reference code, we were able to change the color of the background, the snake, change the font, add music, and add new fruit.
 
