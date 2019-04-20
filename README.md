@@ -1,4 +1,4 @@
-# csuf-cpsc-254-03sp19-classroom-1-team-snake README
+# README.md
 
 
 Stephani Michel: michels126@csu.fullerton.edu
