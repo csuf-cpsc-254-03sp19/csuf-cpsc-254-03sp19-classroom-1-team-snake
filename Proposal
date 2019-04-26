@@ -1,0 +1,70 @@
+Proposal
+
+TEAM MEMBERS
+
+Stephani Michel	
+michels126@csu.fullerton.edu
+
+Heriberto Juache	
+h.juache@csu.fullerton.edu
+
+Shane Wilson		
+swilson2@csu.fullerton.edu
+
+2.OVERVIEW OF PROJECT IDEA
+
+For our project we have moved from Snake to Tic-Tac-Toe. We are going to be modifying the classic and simple game with new features
+to give it some color. We will be adding new music and graphics as well. 
+
+3. PROJECT GOALS
+
+The goals for our project are quite simple. We will be changing the existing music and the existing graphics and be adding new ones
+that are more visually appealing. We will be keeping track of the players and their score if they continue to play.  We will also be 
+adding a timer to keep the game to a maximum of 30 seconds.
+
+4. RESOURCES
+For our project we have found source with an MIT License as well as an Asset License on github that belongs to Chris Kempson. 
+His code is found at the link below.  
+https://github.com/chriskempson/cpp-tic-tac-toe
+Using his code, we will be editing it in order to make the changes that we want such as the music, the graphics, and keeping track of 
+the player
+
+
+5. TEAM RESPONSIBILITIES
+	Each team member has been given one of the three crucial tasks, setting a timer, changing the font, and keeping/creating a scoreboard. 
+
+
+Heriberto (Timer)
+
+ After music, he will responsible for determining how to set the timer for 30 seconds so that the game doesn’t drag on. 
+ He will also in charge of getting which player goes first.  New sounds will be used for our game which include the sounds made 
+ when a game is won, a draw and for each time a symbol is placed. (if time allows, one of our least priorities)
+
+
+
+Stephani (Change Font)
+
+
+ In charge of changing the font of the text that appears in the beginning of the game prompting the players to press enter as
+well as the font that displays the words tic tac toe. She is also in charge of getting the game to prompt the players to enter 
+their name in order to display who the winner is.
+
+
+
+
+Shane (Score Board)
+
+ He is in charge of creating the new symbols for the game. We will have other symbols than the X and O that are commonly used.
+ A crucial step will be having a scoreboard in order to keep track of the winner.
+
+
+
+
+
+
+
+
+
+
+
+
