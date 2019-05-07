@@ -11,6 +11,7 @@
 
 int red_count_wins = 0;
 int yellow_count_wins = 0;
+int count_draws = 0;
 
 void Grid::init()
 {
@@ -83,6 +84,8 @@ bool Grid::check_for_draw()
 	}
 
 	std::cout << "Draw for both players" << std::endl;
+	count_wins(sprite_blank);
+	
 	return true;
 }
 
@@ -108,8 +111,6 @@ bool Grid::check_for_row_win(int col, int row, sprite_sheet sprite)
 {
 	// How many times a particular sprite clipping is matched
 	int consecutive_matches = 0;
-	int red_count_wins = 0;
-	int yellow_count_wins = 0;
 
 	// Iterate over columns in a specified row. For example:
 	// [X][X][X]
@@ -159,6 +160,8 @@ bool Grid::check_for_column_win(int col, int row, sprite_sheet sprite)
 		// If there are enough consecutive matches return true for a win
 		if (consecutive_matches == Setting::win_count) {
 			std::cout << "Column win for " << get_player_name(sprite) << " player" << std::endl;
+			count_wins(sprite);
+			
 			return true;
 		}
 	}
@@ -214,6 +217,8 @@ bool Grid::check_for_forwards_diagonal_win(int col, int row, sprite_sheet sprite
 			// If there are enough consecutive matches return true for a win
 			if (consecutive_matches == Setting::win_count) {
 				std::cout << "Forwards diagonal (/) win for " << get_player_name(sprite) << " player" << std::endl;
+				count_wins(sprite);
+				
 				return true;
 			}
 		}
@@ -272,6 +277,8 @@ bool Grid::check_for_backwards_diagonal_win(int col, int row, sprite_sheet sprit
 			// If there are enough consecutive matches return true for a win
 			if (consecutive_matches == Setting::win_count) {
 				std::cout << "Backwards diagonal (\\) win for " << get_player_name(sprite) << " player" << std::endl;
+				count_wins(sprite);
+				
 				return true;
 			}
 		}
@@ -287,12 +294,22 @@ void Grid::count_wins(sprite_sheet sprite)
 				
 		std::cout << "Red wins: " << red_count_wins << std::endl;
 		std::cout << "Yellow wins: " << yellow_count_wins << std::endl;
+		std::cout << "Draws: " << count_draws << std::endl;
 	}
-	if (get_player_name(sprite) == "Yellow")
+	else if (get_player_name(sprite) == "Yellow")
 	{
 		yellow_count_wins++;
 				
 		std::cout << "Red wins: " << red_count_wins << std::endl;
 		std::cout << "Yellow wins: " << yellow_count_wins << std::endl;
+		std::cout << "Draws: " << count_draws << std::endl;
+	}
+	else
+	{
+		count_draws++;
+				
+		std::cout << "Red wins: " << red_count_wins << std::endl;
+		std::cout << "Yellow wins: " << yellow_count_wins << std::endl;
+		std::cout << "Draws: " << count_draws << std::endl;
 	}
 }
