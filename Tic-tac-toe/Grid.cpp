@@ -83,6 +83,7 @@ bool Grid::check_for_draw()
 		}
 	}
 
+	std::cout << std::endl << "******** DRAW *********" << std::endl;
 	std::cout << "Draw for both players" << std::endl;
 	count_wins(sprite_blank);
 	
@@ -128,6 +129,7 @@ bool Grid::check_for_row_win(int col, int row, sprite_sheet sprite)
 
 		// If there are enough consecutive matches return true for a win
 		if (consecutive_matches == Setting::win_count) {
+			std::cout << std::endl << "******** WINNER *********" << std::endl;
 			std::cout << "Row win for " << get_player_name(sprite) << " player" << std::endl;
 			count_wins(sprite);
 			
@@ -159,6 +161,7 @@ bool Grid::check_for_column_win(int col, int row, sprite_sheet sprite)
 
 		// If there are enough consecutive matches return true for a win
 		if (consecutive_matches == Setting::win_count) {
+			std::cout << std::endl << "******** WINNER *********" << std::endl;
 			std::cout << "Column win for " << get_player_name(sprite) << " player" << std::endl;
 			count_wins(sprite);
 			
@@ -216,6 +219,7 @@ bool Grid::check_for_forwards_diagonal_win(int col, int row, sprite_sheet sprite
 
 			// If there are enough consecutive matches return true for a win
 			if (consecutive_matches == Setting::win_count) {
+				std::cout << std::endl << "******** WINNER *********" << std::endl;
 				std::cout << "Forwards diagonal (/) win for " << get_player_name(sprite) << " player" << std::endl;
 				count_wins(sprite);
 				
@@ -276,6 +280,7 @@ bool Grid::check_for_backwards_diagonal_win(int col, int row, sprite_sheet sprit
 
 			// If there are enough consecutive matches return true for a win
 			if (consecutive_matches == Setting::win_count) {
+				std::cout << std::endl << "******** WINNER *********" << std::endl;
 				std::cout << "Backwards diagonal (\\) win for " << get_player_name(sprite) << " player" << std::endl;
 				count_wins(sprite);
 				
@@ -291,7 +296,8 @@ void Grid::count_wins(sprite_sheet sprite)
 	if (get_player_name(sprite) == "Red")
 	{
 		red_count_wins++;
-				
+			
+		std::cout << std::endl;
 		std::cout << "Red wins: " << red_count_wins << std::endl;
 		std::cout << "Yellow wins: " << yellow_count_wins << std::endl;
 		std::cout << "Draws: " << count_draws << std::endl;
@@ -299,7 +305,8 @@ void Grid::count_wins(sprite_sheet sprite)
 	else if (get_player_name(sprite) == "Yellow")
 	{
 		yellow_count_wins++;
-				
+		
+		std::cout << std::endl;
 		std::cout << "Red wins: " << red_count_wins << std::endl;
 		std::cout << "Yellow wins: " << yellow_count_wins << std::endl;
 		std::cout << "Draws: " << count_draws << std::endl;
@@ -307,7 +314,8 @@ void Grid::count_wins(sprite_sheet sprite)
 	else
 	{
 		count_draws++;
-				
+		
+		std::cout << std::endl;
 		std::cout << "Red wins: " << red_count_wins << std::endl;
 		std::cout << "Yellow wins: " << yellow_count_wins << std::endl;
 		std::cout << "Draws: " << count_draws << std::endl;
