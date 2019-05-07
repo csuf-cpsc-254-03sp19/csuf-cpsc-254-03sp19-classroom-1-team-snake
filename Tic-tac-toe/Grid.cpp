@@ -290,3 +290,23 @@ bool Grid::check_for_backwards_diagonal_win(int col, int row, sprite_sheet sprit
 
 	return false;
 }
+void Grid::count_wins(sprite_sheet sprite)
+{
+	int red_count_wins;
+	int yellow_count_wins;
+	
+	if (get_player_name(sprite) == "Red")
+	{
+		red_count_wins++;
+				
+		std::cout << "Red wins: " << red_count_wins << std::endl;
+		std::cout << "Yellow wins: " << yellow_count_wins << std::endl;
+	}
+	if (get_player_name(sprite) == "Yellow")
+	{
+		yellow_count_wins++;
+				
+		std::cout << "Red wins: " << red_count_wins << std::endl;
+		std::cout << "Yellow wins: " << yellow_count_wins << std::endl;
+	}
+}
