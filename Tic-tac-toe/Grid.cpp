@@ -105,6 +105,8 @@ bool Grid::check_for_row_win(int col, int row, sprite_sheet sprite)
 {
 	// How many times a particular sprite clipping is matched
 	int consecutive_matches = 0;
+	int red_count_wins = 0;
+	int yellow_count_wins = 0;
 
 	// Iterate over columns in a specified row. For example:
 	// [X][X][X]
@@ -123,6 +125,22 @@ bool Grid::check_for_row_win(int col, int row, sprite_sheet sprite)
 		// If there are enough consecutive matches return true for a win
 		if (consecutive_matches == Setting::win_count) {
 			std::cout << "Row win for " << get_player_name(sprite) << " player" << std::endl;
+			
+			if (get_player_name(sprite) == "Red")
+			{
+				red_count_wins++;
+				
+				std::cout << "Red wins: " << red_count_wins << std::endl;
+				std::cout << "Yellow wins: " << yellow_count_wins << std::endl;
+			}
+			if (get_player_name(sprite) == "Yellow")
+			{
+				yellow_count_wins++;
+				
+				std::cout << "Red wins: " << red_count_wins << std::endl;
+				std::cout << "Yellow wins: " << yellow_count_wins << std::endl;
+			}
+			
 			return true;
 		}
 	}
