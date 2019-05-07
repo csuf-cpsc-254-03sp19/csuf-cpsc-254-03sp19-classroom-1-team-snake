@@ -83,6 +83,9 @@ private:
 	 * @return Name of a player
 	 */
 	const char* get_player_name(int sprite);
+	
+	//to count the wins for each player in scoreboard
+	void count_wins(sprite_sheet sprite);
 
 	/**
 	 * @see check_for_win() for documentation of these member functions
