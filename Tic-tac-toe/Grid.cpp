@@ -9,6 +9,9 @@
 #include "Setting.h"
 #include "Resource_manager.h"
 
+int red_count_wins = 0;
+int yellow_count_wins = 0;
+
 void Grid::init()
 {
 	// Setup sprite clipping rects
@@ -292,9 +295,6 @@ bool Grid::check_for_backwards_diagonal_win(int col, int row, sprite_sheet sprit
 }
 void Grid::count_wins(sprite_sheet sprite)
 {
-	int red_count_wins;
-	int yellow_count_wins;
-	
 	if (get_player_name(sprite) == "Red")
 	{
 		red_count_wins++;
