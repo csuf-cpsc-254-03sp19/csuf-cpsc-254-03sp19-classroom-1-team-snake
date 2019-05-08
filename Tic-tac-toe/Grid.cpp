@@ -9,6 +9,7 @@
 #include "Setting.h"
 #include "Resource_manager.h"
 
+//global variables for count wins in function
 int red_count_wins = 0;
 int yellow_count_wins = 0;
 int count_draws = 0;
@@ -83,6 +84,7 @@ bool Grid::check_for_draw()
 		}
 	}
 
+	//display the scoreboard
 	std::cout << std::endl << "******** DRAW *********" << std::endl;
 	std::cout << "Draw for both players" << std::endl;
 	count_wins(sprite_blank);
@@ -129,6 +131,7 @@ bool Grid::check_for_row_win(int col, int row, sprite_sheet sprite)
 
 		// If there are enough consecutive matches return true for a win
 		if (consecutive_matches == Setting::win_count) {
+			//display the scoreboard
 			std::cout << std::endl << "******** WINNER *********" << std::endl;
 			std::cout << "Row win for " << get_player_name(sprite) << " player" << std::endl;
 			count_wins(sprite);
@@ -161,6 +164,7 @@ bool Grid::check_for_column_win(int col, int row, sprite_sheet sprite)
 
 		// If there are enough consecutive matches return true for a win
 		if (consecutive_matches == Setting::win_count) {
+			//display the scoreboard
 			std::cout << std::endl << "******** WINNER *********" << std::endl;
 			std::cout << "Column win for " << get_player_name(sprite) << " player" << std::endl;
 			count_wins(sprite);
@@ -219,6 +223,7 @@ bool Grid::check_for_forwards_diagonal_win(int col, int row, sprite_sheet sprite
 
 			// If there are enough consecutive matches return true for a win
 			if (consecutive_matches == Setting::win_count) {
+				//display the scoreboard
 				std::cout << std::endl << "******** WINNER *********" << std::endl;
 				std::cout << "Forwards diagonal (/) win for " << get_player_name(sprite) << " player" << std::endl;
 				count_wins(sprite);
@@ -280,6 +285,7 @@ bool Grid::check_for_backwards_diagonal_win(int col, int row, sprite_sheet sprit
 
 			// If there are enough consecutive matches return true for a win
 			if (consecutive_matches == Setting::win_count) {
+				//display the scoreboard
 				std::cout << std::endl << "******** WINNER *********" << std::endl;
 				std::cout << "Backwards diagonal (\\) win for " << get_player_name(sprite) << " player" << std::endl;
 				count_wins(sprite);
@@ -291,6 +297,7 @@ bool Grid::check_for_backwards_diagonal_win(int col, int row, sprite_sheet sprit
 
 	return false;
 }
+//the function for counting the wins for each player and display the scoreboard
 void Grid::count_wins(sprite_sheet sprite)
 {
 	if (get_player_name(sprite) == "Red")
