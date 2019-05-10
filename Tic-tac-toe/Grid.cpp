@@ -12,6 +12,7 @@
 int red_count_wins = 0;
 int yellow_count_wins = 0;
 int count_draws = 0;
+int num;
 
 void Grid::init()
 {
