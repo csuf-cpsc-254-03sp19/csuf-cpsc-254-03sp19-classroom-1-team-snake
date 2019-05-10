@@ -92,7 +92,7 @@ void Play_state::advance_game() {
 
 	}
 
-	// Else if there was a win or draw, reset the winner, make next sprite 
+	// Else if there was a win or draw, reset the winner, make next sprite
 	// red and clear the grid
 	else {
 		win_type = false;
@@ -107,7 +107,7 @@ bool Play_state::play_a_move(int col, int row) {
 	// If a grid area is empty
 	if (grid.cell[col][row].current_sprite == grid.sprite_blank) {
 
-		// Play the sprite 
+		// Play the sprite
 		grid.cell[col][row].current_sprite = sprite_to_play;
 
 		// Toggle sprite
