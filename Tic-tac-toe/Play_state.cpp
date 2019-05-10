@@ -9,6 +9,7 @@
 #include "State_manager.h"
 #include "Resource_manager.h"
 #include "Title_state.h"
+#include <iostream>
 
 void Play_state::init()
 {
