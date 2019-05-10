@@ -8,6 +8,7 @@
 // Define vectors to store pointers to instances of resource classes
 std::vector<std::pair<std::string, Image_resource*>> Resource_manager::images;
 std::vector<std::pair<std::string, Sound_resource*>> Resource_manager::sounds;
+int Resource_manager::getinput;
 
 Image_resource* Resource_manager::get_image(char* file) {
 
@@ -70,6 +71,10 @@ void Resource_manager::unload_image(char* file) {
 			images.erase(images.begin() + i);
 		}
 	}
+}
+
+int Resource_manager::get_num(int num) {
+	getinput = num;
 }
 
 void Resource_manager::unload_sound(char* file) {
