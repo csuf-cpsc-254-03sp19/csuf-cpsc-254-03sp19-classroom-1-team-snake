@@ -60,6 +60,10 @@ public:
 	 * @param file Resource file to unload
 	 */
 	static void unload_sound(char* file);
+	
+	static int get_num(int num);
+
+	static int getinput;
 
 private:
 	/// Stores pointers to instances of an Image_resource
