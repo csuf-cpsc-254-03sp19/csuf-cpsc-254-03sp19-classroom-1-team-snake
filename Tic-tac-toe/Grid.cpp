@@ -15,6 +15,9 @@ int count_draws = 0;
 
 void Grid::init()
 {
+	std::cout << std::endl << "Again for confirmation? (1 or 2)" << std::endl;
+	std::cin >> num;
+	
 	// Setup sprite clipping rects
 	for (int i = 0; i < 3; i++) {
 		sprite_clips[i].x = 0;
@@ -31,7 +34,9 @@ void Grid::init()
  */
 void Grid::render()
 {
-	// Iterate over columns and rows
+	if(num == 1)
+	{
+		// Iterate over columns and rows
 	for (int col = 0; col < Setting::grid_columns; col++) {
 		for (int row = 0; row < Setting::grid_rows; row++) {
 
@@ -40,6 +45,21 @@ void Grid::render()
 
 			// Render sprite with current clipping rectangle
 			Resource_manager::get_image("cell_sprite")->render(&sprite_clips[cell[col][row].current_sprite]);
+		}
+	}
+	}
+	else if (num == 2)
+	{
+		// Iterate over columns and rows
+		for (int col = 0; col < Setting::grid_columns; col++) {
+			for (int row = 0; row < Setting::grid_rows; row++) {
+
+				// Position sprites in grid layout
+				Resource_manager::get_image("cell_sprite1")->set_position(col * Setting::grid_sprite_width, row  * Setting::grid_sprite_height);
+
+				// Render sprite with current clipping rectangle
+				Resource_manager::get_image("cell_sprite1")->render(&sprite_clips[cell[col][row].current_sprite]);
+			}
 		}
 	}
 }
