@@ -125,7 +125,7 @@ void Game::run()
           last approximately 15 seconds.
          */
         currentTime = SDL_GetTicks();
-        if (currentTime - startTime > 15000){
+        if (currentTime - startTime > 30000){
           Game::stop();
         }
 
