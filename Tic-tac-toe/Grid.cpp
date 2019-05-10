@@ -83,7 +83,7 @@ void Grid::clear()
 const char* Grid::get_player_name(int sprite)
 {
 	// Define an array player names
-	static const char* player_names[] = { "Red", "Yellow" };
+	static const char* player_names[] = { "Red", "Blue" };
 
 	// Return a player name
 	return player_names[sprite -1];
@@ -320,16 +320,16 @@ void Grid::count_wins(sprite_sheet sprite)
 			
 		std::cout << std::endl;
 		std::cout << "Red wins: " << red_count_wins << std::endl;
-		std::cout << "Yellow wins: " << yellow_count_wins << std::endl;
+		std::cout << "Blue wins: " << yellow_count_wins << std::endl;
 		std::cout << "Draws: " << count_draws << std::endl;
 	}
-	else if (get_player_name(sprite) == "Yellow")
+	else if (get_player_name(sprite) == "Blue")
 	{
 		yellow_count_wins++;
 		
 		std::cout << std::endl;
 		std::cout << "Red wins: " << red_count_wins << std::endl;
-		std::cout << "Yellow wins: " << yellow_count_wins << std::endl;
+		std::cout << "Blue wins: " << yellow_count_wins << std::endl;
 		std::cout << "Draws: " << count_draws << std::endl;
 	}
 	else
@@ -338,7 +338,7 @@ void Grid::count_wins(sprite_sheet sprite)
 		
 		std::cout << std::endl;
 		std::cout << "Red wins: " << red_count_wins << std::endl;
-		std::cout << "Yellow wins: " << yellow_count_wins << std::endl;
+		std::cout << "Blue wins: " << yellow_count_wins << std::endl;
 		std::cout << "Draws: " << count_draws << std::endl;
 	}
 }
