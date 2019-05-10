@@ -12,7 +12,7 @@
 #include "Resource_manager.h"
 #include "Title_state.h"
 
-// Initialise static data-members 
+// Initialise static data-members
 SDL_Window* Game::window = NULL;
 SDL_Renderer* Game::renderer = NULL;
 
@@ -87,9 +87,14 @@ bool Game::init(char* title, int window_width, int window_height)
 
 void Game::run()
 {
+    /*Begins the timer from the start of the game and
+    declares currentTime for future use
+    */
+    unsigned int startTime = 0, currentTime;
+
     while (running)
     {
-        // Loop until all pending events have left the queue 
+        // Loop until all pending events have left the queue
         while (SDL_PollEvent(&event)) {
 
             // Let the state handle events
@@ -110,9 +115,20 @@ void Game::run()
         // Render the state
         State_manager::get_state()->render();
 
-        // Update screen taking into account SDL v-sync. This is what stops the 
+        // Update screen taking into account SDL v-sync. This is what stops the
         // game loop from running too fast
         SDL_RenderPresent(renderer);
+
+        /*Takes the currentTime (ticks) since game started and subtracts by
+          the startTime.
+         *The goal of this if statement is to assure that the game will only
+          last approximately 15 seconds.
+         */
+        currentTime = SDL_GetTicks();
+        if (currentTime - startTime > 15000){
+          Game::stop();
+        }
+
 
     }
 }
