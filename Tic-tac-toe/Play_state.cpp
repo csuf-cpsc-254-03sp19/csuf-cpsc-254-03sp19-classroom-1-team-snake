@@ -12,7 +12,24 @@
 
 void Play_state::init()
 {
-	Resource_manager::load_image("cell_sprite");
+	int num;
+	std::cout << std::endl << "1. Cross/Circle" << std::endl;
+	std::cout << "2. Star/Diamond" << std::endl;
+	std::cout << "Your choice: " << std::endl;
+	std::cin >> num;
+
+	if (num == 1)
+	{
+		Resource_manager::load_image("cell_sprite");
+		Resource_manager::get_num(1);
+	}
+	else if (num == 2)
+	{
+		Resource_manager::load_image("cell_sprite1");
+		Resource_manager::get_num(2);
+	}
+	
+	
 	Resource_manager::load_image("red_wins");
 	Resource_manager::load_image("yellow_wins");
 	Resource_manager::load_image("draw");
