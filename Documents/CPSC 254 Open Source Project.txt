@@ -1,0 +1,57 @@
+﻿CPSC 254 Open Source Project 
+Tic-Tac-Toe
+Stephani Michel
+Heriberto Juache
+Shane Wilson
+California State University of Fullerton
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Beginning of Project
+        In the beginning of the project, our team had decided on doing the game snake. With this in mind, we were able to find a repository on Github that seemed to have very clean code and the MIT license we were looking for. Unfortunately for us, once we tried to compile the code there were numerous errors and we had to look for another source code. With no luck, we decided to change from team snake to team tic-tac-toe. With this change, we were then able to find source code with the desired license and code that was able to run, even though installing the necessary libraries was a pain, we were relieved it was running. With the code running on Visual Studio and then Linux, we moved on to the changes and goals we had in mind for the project. 
+
+
+Goals of our Project
+        With Tic-Tac-Toe being such a simple game, we began looking at what kind of changes and new features we could implement. One of the first things we wanted to do was change the look of the X’s and O’s displayed, and the color font. Our next feature we were looking to implement was creating a scoreboard in order to keep track of how many times a player had won. The scoreboard was not something that we had seen in the original game and was a feature we wanted to include. A new feature that we thought would be nice in such a simple game would be a timer. The timer idea was made so that it forced the players to take no more than the allotted time playing  before the game immediately exited. Another feature we wanted to have was the ability to take in the users name and display it so that when someone won, it would display the kind of win they got followed by the name of the player. Another feature we wanted to change was the sound. There is no background music playing, the only sounds are when someone wins, there is a draw, and for every time a sprite is put down. For the background music, Heri decided to implement the a very well known song, Final Countdown by Europe. This song plays the entire time the game is running. 
+
+
+Process of Making Changes
+        Each team member was assigned a different task. Heriberto was assigned the timer, this being mandatory and the background music, if time allowed. Stephani was in charge of getting the player names and displaying it when there was a winner as well as changing the display/color of the X’s and the O’s and the word that display Tic-Tac-Toe. Shane was in charge of making the scoreboard and creating the sprite that would later be modified by Stephani. I, Stephani, had the most issues allowing for user input. As I am used to Visual Studios, I worked there and later pushed my changes into Github and ran it on Linux. The user input prompt displayed in the console in Visual Studio but unfortunately not for Linux. Luckily, after looking more into library functions, I was able to find the extern keyword and implement it into my code was able to successfully get and hold the player names. As far as the timer goes, Heriberto had trouble implementing it in the correct file. As he would try and write the code for the timer, there would be issues where the the game would begin but then no sprites would be placed, or in the console it would take in input but the game prompt itself would not show up. This too was able to resolved from trial and error and the timer was set at a 60 seconds. For Shane, he was able to put in the missing scoreboard in the terminal editor and get a missing part in our project successfully.
+ 
+
+
+Other Details
+        The biggest struggle for all of us was figuring out how to use another library. The library used was SDL, Simple Directmedia Layer, a library that provides low level access to mouse clicking, audio, images and the keyboard. Personally, for me, this library was a lot harder to understand than the std library I am so used to. We were all able to eventually work with the library and get our desired changes implemented.  Luckily this library mentioned works in C++ which is the primary language of the whole team.
+
+
+Closing Remarks
+        As this is written with our project being done, we were able to get all the changes we wanted done. The timer works, the sprites and title font have been changed, and the scoreboard is now working. One of the key requirements was getting the terminal editor to prompt the users to input their name and eventually be able to display it on the scoreboard. This too was done and the last step was the background music which pulled the whole game together.
