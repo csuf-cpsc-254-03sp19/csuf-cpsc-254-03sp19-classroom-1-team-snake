@@ -21,13 +21,13 @@ void Title_state::init()
 {
 	Resource_manager::load_image("title_background");
 
-	// Load the text images with an offset so the don't appear on the 
+	// Load the text images with an offset so the don't appear on the
 	// screen when first rendered
 	Resource_manager::load_image("tic_text")->set_position(-100, 0);
 	Resource_manager::load_image("tac_text")->set_position(-100, 0);
 	Resource_manager::load_image("toe_text")->set_position(-100, 0);
 
-	Resource_manager::load_sound("title");
+	Resource_manager::load_sound("title2");
 
 	title_sound_has_played = false;
 
@@ -49,7 +49,7 @@ void Title_state::handle_events(SDL_Event& event)
 		int pixels_from_right = Setting::window_width - mouse_x;
 		int pixels_from_top = mouse_y;
 
-		// If click falls within 8px from right and 9px from top user has 
+		// If click falls within 8px from right and 9px from top user has
 		// pressed the about button
 		if (pixels_from_right <= 8 && pixels_from_top < 9) {
 			State_manager::set_state(new About_state());
@@ -70,7 +70,7 @@ void Title_state::update()
 	else if (tac_text_x > 13) {
 
 		if (!title_sound_has_played) {
-			Resource_manager::get_sound("title")->play();
+			Resource_manager::get_sound("title2")->play();
 			title_sound_has_played = true;
 		}
 
@@ -100,5 +100,5 @@ void Title_state::clean_up()
 	Resource_manager::unload_image("tac_text");
 	Resource_manager::unload_image("toe_text");
 
-	Resource_manager::unload_sound("title");
+	//Resource_manager::unload_sound("title2");
 }
