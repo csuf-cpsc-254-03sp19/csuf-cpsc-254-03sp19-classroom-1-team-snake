@@ -5,6 +5,8 @@
 
 #pragma once
 #include <string>
+#include <string>
+
 
 /**
  * Contains common setting variables for the game
@@ -14,7 +16,7 @@
 struct Setting
 {
 	/// Name that appears in the application titlebar
-	static char* game_name; 
+	static char* game_name;
 
 	/// Path to the icon that appears in the application titlebar
 	static char* icon_path;
@@ -27,7 +29,7 @@ struct Setting
 	/// slash
 	static const std::string sound_path;
 
-	/// Set first element to -1 to disable colour keying, otherwise set to a 
+	/// Set first element to -1 to disable colour keying, otherwise set to a
 	/// colour such as { 0, 0xFF, 0xFF }
 	static const int color_key[];
 
@@ -37,7 +39,7 @@ struct Setting
 	/// Set to false for peaceful development
 	static const bool play_sounds = true;
 
-	/// Changing the scale factor adjusts the size of the images and the 
+	/// Changing the scale factor adjusts the size of the images and the
 	/// playing window
 	static const int scale_factor = 8;
 
@@ -55,11 +57,11 @@ struct Setting
 	/// window_height and actual_window_height
 	static const int grid_rows = 3;
 
-	/// The amount of consecutive player pieces in a row, column or diagonal 
+	/// The amount of consecutive player pieces in a row, column or diagonal
 	/// required for a win
 	static const int win_count = 3;
 
-	// Subtracting 1 from the window_width and window_height will hide part of 
+	// Subtracting 1 from the window_width and window_height will hide part of
 	// the repeating grid image that we don't want to see
 
 	/// Width of the application window

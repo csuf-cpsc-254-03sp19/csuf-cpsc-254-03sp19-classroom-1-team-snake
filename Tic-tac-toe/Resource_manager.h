@@ -8,6 +8,13 @@
 #include <vector>
 #include "Image_resource.h"
 #include "Sound_resource.h"
+#include <string>
+
+//had to make the variables of extern type in order to have them be global variables and Used
+//in multiple .cpp files through the use of header files
+extern std::string playerOneName;
+extern std::string playerTwoName;
+
 
 /**
  * Manages game resource files such as images and sounds
@@ -60,7 +67,7 @@ public:
 	 * @param file Resource file to unload
 	 */
 	static void unload_sound(char* file);
-	
+
 	static int get_num(int num);
 
 	static int getinput;

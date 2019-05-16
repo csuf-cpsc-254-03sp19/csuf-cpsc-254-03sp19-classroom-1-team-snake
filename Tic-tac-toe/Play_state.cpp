@@ -10,9 +10,26 @@
 #include "Resource_manager.h"
 #include "Title_state.h"
 #include <iostream>
+#include <string>
 
+//since we made the global variables in the Resource_manager.h
+//I had to declare them in this cpp file in order for them to be
+//used as this is where the display is for the beginning menu
+std::string playerOneName;
+std::string playerTwoName;
 void Play_state::init()
 {
+	// variables that will hold the names of the players
+//	extern std::string playerOneName;
+	//extern std::string playerTwoName;
+
+	// the prompt asking the users to enter their names to later be implemented in the score board
+	std::cout << "Please enter name for Player 1:" << std::endl;
+	std::cin >> playerOneName;
+	std::cout << "Please enter name for Player 2:" << std::endl;
+	std::cin >> playerTwoName;
+
+//the menu that will be displayed asking them which sprite they would like to use
 	int num;
 	std::cout << std::endl << "1. Cross/Circle" << std::endl;
 	std::cout << "2. Star/Diamond" << std::endl;
@@ -29,8 +46,8 @@ void Play_state::init()
 		Resource_manager::load_image("cell_sprite1");
 		Resource_manager::get_num(2);
 	}
-	
-	
+
+
 	Resource_manager::load_image("red_wins");
 	Resource_manager::load_image("yellow_wins");
 	Resource_manager::load_image("draw");

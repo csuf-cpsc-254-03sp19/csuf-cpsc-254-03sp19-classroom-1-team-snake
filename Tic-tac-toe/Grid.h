@@ -6,6 +6,9 @@
 #pragma once
 #include <SDL.h>
 #include "Setting.h"
+#include <string>
+
+
 
 /**
  * Rendering and logic for the game's grid and cells.
@@ -53,7 +56,7 @@ public:
 	/**
 	 * Check to see if a player has won the game
 	 *
-	 * A win can come from a row, column or diagonal count of consecutive 
+	 * A win can come from a row, column or diagonal count of consecutive
 	 * player moves.
 	 *
 	 * @param col Grid column number to run check from
@@ -83,7 +86,9 @@ private:
 	 * @return Name of a player
 	 */
 	const char* get_player_name(int sprite);
-	
+
+	const std::string get_player_input(int sprite);
+
 	//to count the wins for each player in scoreboard
 	void count_wins(sprite_sheet sprite);
 
